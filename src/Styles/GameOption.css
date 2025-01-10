@@ -81,8 +81,9 @@
 
 .option-bubble:hover {
   box-shadow: 0 4px 20px rgba(0, 255, 255, 0.8); /* Intense hover glow */
-  transform: scale(1.05); /* Subtle hover effect */
+  transform: scale(1.08); /* Subtle hover effect */
 }
+
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 

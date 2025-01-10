@@ -6,6 +6,7 @@ export const GameContext = createContext(null);
 
 //This is GlobalState that recieves component as children and provides states to be consumed by them
 function GameContextProvider({ children }) {
+
   const [cellSelected, setCellSelected] = useState(null);
 
   const prefilled = [
@@ -34,6 +35,8 @@ function GameContextProvider({ children }) {
 
   const [notesMode, setNotesMode] = useState(false);
 
+  const [history, setHistory] = useState([{sudoku, notes}]);
+
   return (
     <GameContext.Provider
       value={{
@@ -46,6 +49,8 @@ function GameContextProvider({ children }) {
         setNotes,
         notesMode,
         setNotesMode,
+        history,
+        setHistory,
       }}
     >
       {children}

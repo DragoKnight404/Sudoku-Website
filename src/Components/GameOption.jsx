@@ -15,6 +15,8 @@ function GameOption() {
     setSudoku,
     notes,
     setNotes,
+    history,
+    setHistory,
   } = useContext(GameContext);
 
   function notesClickHandler() {
@@ -27,7 +29,6 @@ function GameOption() {
   }
 
   function eraseClickHandler() {
-
     const { row, col } = cellSelected;
 
     const newSudoku = sudoku.map((row) => [...row]);
@@ -47,6 +48,31 @@ function GameOption() {
       cell_value: newSudoku[row][col],
       notes_value: newNotes[row][col],
     });
+    setHistory([...history, { sudoku: newSudoku, notes: newNotes }]);
+  }
+
+  function undoClickHandler() {
+    // Check if there are more than one history objects
+    if (history.length > 1) {
+      // Optionally, update the current sudoku and notes to the latest history state
+      const newState = history[history.length - 2]; // Second last state
+      setSudoku(newState.sudoku);
+      setNotes(newState.notes);
+      setCellSelected((prevCell) => {
+        if(prevCell)
+        return {
+          ...prevCell,
+          cell_value: newState.sudoku[prevCell.row][prevCell.col],
+          notes_value: newState.notes[prevCell.row][prevCell.col],
+        };
+        else return prevCell;
+      });
+
+      // Remove the latest history object
+      setHistory((prevHistory) => prevHistory.slice(0, -1));
+    } else {
+      console.log("Undo is not possible. Only one history state exists.");
+    }
   }
 
   useEffect(() => {
@@ -64,7 +90,7 @@ function GameOption() {
 
   return (
     <div className="option-bubbles-container">
-      <div className="option-bubble">
+      <div className="option-bubble" onClick={undoClickHandler}>
         <button className="button-option Undo">
           <img src={undoIcon} alt="Undo" className="button-icon" />
         </button>

@@ -14,6 +14,8 @@ function GameGrid() {
     notesMode,
     notes,
     setNotes,
+    history,
+    setHistory,
   } = useContext(GameContext); // consumes the context
 
   useEffect(() => {
@@ -54,7 +56,7 @@ function GameGrid() {
           cell_value: sudoku[newRow][newCol],
           notes_value: notes[newRow][newCol],
         });
-        console.log("with key", cellSelected);
+        //console.log("with key", cellSelected);
         return;
       }
 
@@ -70,6 +72,8 @@ function GameGrid() {
         const c = (key_pressed - 1) % 3;
         const subBoxRow = Math.floor(row/3);
         const subBoxCol = Math.floor(col/3);
+
+        const newSudoku = sudoku.map(row => [...row]);
         // const newNotes = [...notes]; messes up as it is just a shallow copy
         // Create a deep copy of notes
         const newNotes = notes.map((rowNotes) =>
@@ -88,8 +92,6 @@ function GameGrid() {
           setCellSelected({ ...cellSelected, notes_value: newNotes[row][col] });
         } 
         else if (!notesMode) {
-          const newSudoku = sudoku.map(row => [...row]);
-
           newSudoku[row][col] = key_pressed;
           
           newNotes[row][col] = [
@@ -120,6 +122,8 @@ function GameGrid() {
           });
         }
 
+        setHistory([...history, {sudoku: newSudoku, notes: newNotes}]);
+        //console.log(history);
         //console.log("real notes =", notes[row][col]);
         return;
       }
@@ -143,6 +147,8 @@ function GameGrid() {
           cell_value: newSudoku[row][col],
           notes_value: newNotes[row][col],
         });
+        setHistory([...history, {sudoku: newSudoku, notes: newNotes}]);
+        //console.log(history);
         return;
       }
     };
@@ -150,7 +156,7 @@ function GameGrid() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown); // Acts as a destructor
     };
-  }, [cellSelected, sudoku, notesMode, notes]);
+  }, [cellSelected, sudoku, notesMode, notes, history]);
 
   function cellClickHandler(row, col) {
     // console.log(
@@ -167,7 +173,7 @@ function GameGrid() {
       cell_value: sudoku[row][col],
       notes_value: notes[row][col],
     });
-    console.log(cellSelected);
+    //console.log(cellSelected);
   }
 
   function fillCellValue(row, col) {
@@ -193,6 +199,7 @@ function GameGrid() {
             let cellClass = "sudoku-cell";
             
             if(isSelectedCell){
+              //console.log('Rerendered ',cellSelected);
               cellClass += " highlighted biggest"
             } else if (isSameValue) {
               cellClass += " highlighted big";
