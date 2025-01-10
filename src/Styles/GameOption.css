@@ -1,0 +1,152 @@
+/* .option-name{
+  font-weight: 600;
+  color: #c2ecef;
+  justify-content: center;
+  display: flex;
+  cursor: default;
+  font-size: 1.4em;
+  flex: 1;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.Grid-with-options{
+  flex-direction: row;
+  display: flex;
+  gap: 1rem;
+}
+
+.option-bubbles-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.button-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.button-option{
+  border: 2px solid transparent;
+  border-radius: 40%;
+  width: 80px;
+  height: 80px;
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #b4fbdd;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: rgb(16, 66, 2);
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 10px;
+  border-color: black;
+  flex:10;
+  min-height: 80px;
+  outline: none;
+}
+
+.button-option:hover{
+  background-color: #71e0b2;
+}
+
+.button-option.selected{
+  border: 5px solid;
+  border-color: #070ffb;
+  background-color: #56fab5;
+}
+
+.option-bubble{
+  background-color: rgb(24, 114, 63);
+  padding-inline: 5px;
+  display: flex;
+  max-height: 140px;
+  flex-direction: column;
+  border-radius: 20%;
+  border: 2px solid transparent;
+  border-color: black;
+} */
+.option-name {
+  font-weight: 600;
+  color: #e0f7fa; /* Softer and more visible text color */
+  justify-content: center;
+  display: flex;
+  cursor: default;
+  font-size: 1.4em;
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add a shadow for readability */
+}
+
+.Grid-with-options {
+  flex-direction: row;
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* Center align options */
+}
+
+.option-bubbles-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center; /* Center the container */
+}
+
+.button-icon {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)); /* Add subtle shadow for icons */
+}
+
+.button-option {
+  border: 2px solid transparent;
+  border-radius: 50%; /* Make buttons circular */
+  width: 80px;
+  height: 80px;
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #b4fbdd;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.25s, background-color 0.25s; /* Smooth transitions */
+  color: rgb(16, 66, 2);
+  margin: 10px 5px; /* Combine margins for simplicity */
+  border-color: black;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.button-option:hover {
+  background-color: #71e0b2;
+  transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.button-option.selected {
+  border: 5px solid;
+  border-color: #ff9800; /* Use a warm orange for contrast */
+  background-color: #56fab5;
+  transform: scale(1.1); /* Slight zoom for selected */
+}
+
+.option-bubble {
+  background-color: rgb(24, 114, 63);
+  padding-inline: 10px; /* Add a bit more padding */
+  display: flex;
+  max-height: 140px;
+  flex-direction: column;
+  border-radius: 20%; /* Rounded corners */
+  border: 2px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
+  align-items: center; /* Center contents */
+  justify-content: center; /* Center contents */
+}

@@ -1,0 +1,216 @@
+/* button:hover {
+  background-color: #f1f4b9;
+}
+
+.GameBox{
+  padding: 5px;
+  background-color: rgb(7, 2, 0);
+}
+
+.sudoku-cell{
+  border: 1px solid transparent;
+  width: 60px;
+  height: 60px;
+  font-size: 2.4em;
+  font-weight: 600;
+  outline: none;
+  font-family: inherit;
+  background-color: #c8fbb4;
+  cursor: default;
+  transition: border-color 0.25s;
+  padding: 0px;
+}
+
+.sudoku-cell.highlighted.biggest {
+  background-color: #fbbe53; 
+}
+.sudoku-cell.highlighted.big {
+  background-color: #f1f959; 
+}
+.sudoku-cell.highlighted.small {
+  background-color: #f4f991; 
+}
+
+.sudoku-cell.prefilled{
+  color: rgb(13, 3, 69);
+  font-weight: 600;
+}
+
+.sudoku-cell.non-prefilled{
+  color: rgb(5, 19, 220);
+  font-weight: 600;
+}
+
+
+.GridGap-column{
+  width: 5px;
+  background-color: black ;
+}
+
+.GridGap-smallColumn{
+  width: 1px;
+  background-color: #000000;
+}
+
+.GridGap-row{
+  height: 5px;
+  background-color: black ;
+}
+
+.GridGap-smallRow{
+  height: 1.1px;
+  background-color: #000000 ;
+}
+
+.sudoku-row{
+  flex-direction: row;
+  display: flex;
+}
+
+.sudoku-cellDiv{
+  flex-direction: row;
+  display: flex;
+}
+
+.notes-row{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.notes-cell{
+  flex: 1;
+  min-width: 33%;
+  min-height: 18px;
+  font-size: 0.37em;
+  font-weight: 500;
+  color: black;
+} */
+
+
+/* Button hover effect */
+button:hover {
+  background-color: #f1f4b9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+  transition: background-color 0.25s ease, box-shadow 0.25s ease; /* Smooth transition */
+}
+
+/* GameBox styling */
+.GameBox {
+  padding: 5px;
+  background-color: rgb(7, 2, 0);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow */
+  transition: box-shadow 0.25s ease; /* Smooth transition */
+}
+
+/* Sudoku cell styling */
+.sudoku-cell {
+  border: 1px solid transparent;
+  width: 60px;
+  height: 60px;
+  font-size: 2.4em;
+  font-weight: 600;
+  outline: none;
+  font-family: inherit;
+  background-color: #c8fbb4;
+  cursor: default;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease; /* Smooth transitions */
+  padding: 0px;
+}
+
+.sudoku-cell:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add hover shadow */
+}
+
+/* Highlighted cells */
+.sudoku-cell.highlighted.biggest {
+  background-color: #fbbe53;
+  box-shadow: 0px 4px 10px rgba(251, 190, 83, 0.5); /* Matching shadow */
+}
+
+.sudoku-cell.highlighted.big {
+  background-color: #f1f959;
+  box-shadow: 0px 4px 10px rgba(241, 249, 89, 0.5); /* Matching shadow */
+}
+
+.sudoku-cell.highlighted.small {
+  background-color: #f4f991;
+  box-shadow: 0px 4px 10px rgba(244, 249, 145, 0.5); /* Matching shadow */
+}
+
+/* Prefilled cells */
+.sudoku-cell.prefilled {
+  color: rgb(13, 3, 69);
+  font-weight: 600;
+  transition: box-shadow 0.25s ease; /* Smooth transition */
+}
+
+.sudoku-cell.prefilled:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle hover shadow */
+}
+
+/* Non-prefilled cells */
+.sudoku-cell.non-prefilled {
+  color: rgb(5, 19, 220);
+  font-weight: 600;
+  transition: box-shadow 0.25s ease; /* Smooth transition */
+}
+
+.sudoku-cell.non-prefilled:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle hover shadow */
+}
+
+/* Grid gap styling */
+.GridGap-column {
+  width: 5px;
+  background-color: black;
+}
+
+.GridGap-smallColumn {
+  width: 1px;
+  background-color: #000000;
+}
+
+.GridGap-row {
+  height: 5px;
+  background-color: black;
+}
+
+.GridGap-smallRow {
+  height: 1.1px;
+  background-color: #000000;
+}
+
+/* Sudoku row styling */
+.sudoku-row {
+  flex-direction: row;
+  display: flex;
+}
+
+/* Sudoku cell container */
+.sudoku-cellDiv {
+  flex-direction: row;
+  display: flex;
+}
+
+/* Notes row */
+.notes-row {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+/* Notes cell */
+.notes-cell {
+  flex: 1;
+  min-width: 33%;
+  min-height: 18px;
+  font-size: 0.37em;
+  font-weight: 500;
+  color: black;
+  transition: box-shadow 0.25s ease; /* Smooth transition */
+}
+
+/* .notes-cell:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);  
+} */
