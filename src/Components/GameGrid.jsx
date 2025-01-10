@@ -88,7 +88,8 @@ function GameGrid() {
           setCellSelected({ ...cellSelected, notes_value: newNotes[row][col] });
         } 
         else if (!notesMode) {
-          const newSudoku = [...sudoku];
+          const newSudoku = sudoku.map(row => [...row]);
+
           newSudoku[row][col] = key_pressed;
           
           newNotes[row][col] = [
@@ -125,7 +126,7 @@ function GameGrid() {
 
       // Handle clearing the cell
       if (event.key === "Backspace" || event.key === "Delete") {
-        const newSudoku = [...sudoku];
+        const newSudoku = sudoku.map(row => [...row]);
         const newNotes = notes.map((rowNotes) =>
           rowNotes.map((cellNotes) => cellNotes.map((subRow) => [...subRow]))
         );
