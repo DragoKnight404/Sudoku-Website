@@ -1,78 +1,6 @@
-/* .option-name{
-  font-weight: 600;
-  color: #c2ecef;
-  justify-content: center;
-  display: flex;
-  cursor: default;
-  font-size: 1.4em;
-  flex: 1;
-  padding: 0px;
-  margin: 0px;
-  margin-top: 4px;
-  margin-bottom: 12px;
-}
-
-.Grid-with-options{
-  flex-direction: row;
-  display: flex;
-  gap: 1rem;
-}
-
-.option-bubbles-container {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.button-icon {
-  width: 50px;
-  height: 50px;
-}
-
-.button-option{
-  border: 2px solid transparent;
-  border-radius: 40%;
-  width: 80px;
-  height: 80px;
-  font-size: 1.5em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #b4fbdd;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  color: rgb(16, 66, 2);
-  margin-right: 5px;
-  margin-left: 5px;
-  margin-top: 10px;
-  border-color: black;
-  flex:10;
-  min-height: 80px;
-  outline: none;
-}
-
-.button-option:hover{
-  background-color: #71e0b2;
-}
-
-.button-option.selected{
-  border: 5px solid;
-  border-color: #070ffb;
-  background-color: #56fab5;
-}
-
-.option-bubble{
-  background-color: rgb(24, 114, 63);
-  padding-inline: 5px;
-  display: flex;
-  max-height: 140px;
-  flex-direction: column;
-  border-radius: 20%;
-  border: 2px solid transparent;
-  border-color: black;
-} */
 .option-name {
   font-weight: 600;
-  color: #e0f7fa; /* Softer and more visible text color */
+  color: #00ffff; /* Neon cyan for sci-fi feel */
   justify-content: center;
   display: flex;
   cursor: default;
@@ -82,7 +10,7 @@
   margin: 0;
   margin-top: 4px;
   margin-bottom: 12px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add a shadow for readability */
+  text-shadow: 0px 0px 8px rgba(0, 255, 255, 0.7); /* Neon glow effect */
 }
 
 .Grid-with-options {
@@ -102,12 +30,102 @@
 .button-icon {
   width: 50px;
   height: 50px;
-  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)); /* Add subtle shadow for icons */
+  filter: drop-shadow(0px 0px 6px rgba(0, 255, 255, 0.5)); /* Neon shadow for icons */
+}
+
+.button-option {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%; /* Circular buttons */
+  width: 80px;
+  height: 80px;
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  background-color: #28384b; /* Dark background for consistency */
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.25s, background-color 0.25s; /* Smooth transitions */
+  color: #00ffff; /* Neon text */
+  margin: 10px 5px; /* Simplified margin */
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.6); /* Sci-fi glow shadow */
+}
+
+.button-option:hover {
+  background-color: #6fb3e3; /* Subtle highlight color */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.button-option.selected {
+  border: 3.5px solid #d53183; /* Neon pink border for selected */
+  background-color: rgba(0, 255, 208, 0.8); /* Bright green highlight */
+  transform: scale(1.15); /* Larger zoom for selected */
+  box-shadow: 0 4px 20px rgba(255, 0, 127, 0.6); /* Glow effect */
+}
+
+.option-bubble {
+  background-color: #101010; /* Dark background */
+  padding-inline: 10px;
+  display: flex;
+  max-height: 140px;
+  flex-direction: column;
+  border-radius: 20%; /* Rounded corners */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4); /* Glow effect */
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.25s ease; /* Smooth animations */
+}
+
+.option-bubble:hover {
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.8); /* Intense hover glow */
+  transform: scale(1.05); /* Subtle hover effect */
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/* .option-name {
+  font-weight: 600;
+  color: #e0f7fa; 
+  justify-content: center;
+  display: flex;
+  cursor: default;
+  font-size: 1.4em;
+  flex: 1;
+  padding: 0;
+  margin: 0;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+}
+
+.Grid-with-options {
+  flex-direction: row;
+  display: flex;
+  gap: 1rem;
+  justify-content: center; 
+}
+
+.option-bubbles-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center; 
+}
+
+.button-icon {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)); 
 }
 
 .button-option {
   border: 2px solid transparent;
-  border-radius: 50%; /* Make buttons circular */
+  border-radius: 50%; 
   width: 80px;
   height: 80px;
   font-size: 1.5em;
@@ -115,38 +133,38 @@
   font-family: inherit;
   background-color: #b4fbdd;
   cursor: pointer;
-  transition: transform 0.2s, border-color 0.25s, background-color 0.25s; /* Smooth transitions */
+  transition: transform 0.2s, border-color 0.25s, background-color 0.25s; 
   color: rgb(16, 66, 2);
-  margin: 10px 5px; /* Combine margins for simplicity */
+  margin: 10px 5px; 
   border-color: black;
   outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .button-option:hover {
   background-color: #71e0b2;
-  transform: scale(1.05); /* Subtle zoom on hover */
+  transform: scale(1.05); 
 }
 
 .button-option.selected {
   border: 5px solid;
-  border-color: #ff9800; /* Use a warm orange for contrast */
+  border-color: #ff9800; 
   background-color: #56fab5;
-  transform: scale(1.1); /* Slight zoom for selected */
+  transform: scale(1.1);
 }
 
 .option-bubble {
   background-color: rgb(24, 114, 63);
-  padding-inline: 10px; /* Add a bit more padding */
+  padding-inline: 10px; 
   display: flex;
   max-height: 140px;
   flex-direction: column;
-  border-radius: 20%; /* Rounded corners */
+  border-radius: 20%; 
   border: 2px solid black;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
-  align-items: center; /* Center contents */
-  justify-content: center; /* Center contents */
-}
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  align-items: center; 
+  justify-content: center;
+} */

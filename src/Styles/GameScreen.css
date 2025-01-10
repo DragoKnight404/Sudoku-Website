@@ -1,8 +1,21 @@
-h1 {
+.Game-title {
   font-size: 3.2em;
   line-height: 1.1;
-  color: #68ca05;
+  color: #18f8cf; /* Vibrant neon green-yellow */
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  text-shadow: 0px 0px 15px rgba(228, 242, 146, 0.8), 
+               0px 0px 30px rgba(255, 255, 0, 0.6); /* Sci-fi glow */
+  text-align: center; /* Center-align the title for symmetry */
+  margin: 20px 0; /* Add some spacing */
+  transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth animations */
 }
+
+.Game-title:hover {
+  transform: scale(1.05); /* Subtle zoom on hover */
+  text-shadow: 0px 0px 20px rgba(255, 255, 0, 1), 
+               0px 0px 40px rgba(255, 255, 0, 0.8); /* Enhanced glow on hover */
+}
+
 
 /* a {
   font-weight: 500;
@@ -26,7 +39,7 @@ button {
   color: rgb(248, 122, 4);
 } */
 
-.sudoku-cell{
+/* .sudoku-cell{
   border: 1px solid transparent;
   width: 60px;
   height: 60px;
@@ -39,9 +52,9 @@ button {
   transition: border-color 0.25s;
   color: black;
   padding: 0px;
-}
+} */
 
-.notes-row{
+/* .notes-row{
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -49,8 +62,7 @@ button {
 
 .notes-cell{
   flex: 1;
-  /* background-color: #c96d6d; */
   font-size: 0.37em;
   font-weight: 500;
   color: black;
-}
+} */

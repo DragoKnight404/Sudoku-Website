@@ -91,73 +91,77 @@
 /* Button hover effect */
 button:hover {
   background-color: #f1f4b9;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
-  transition: background-color 0.25s ease, box-shadow 0.25s ease; /* Smooth transition */
+  box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.6), 0px 0px 10px rgba(0, 255, 255, 0.8); /* Neon glow */
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 /* GameBox styling */
 .GameBox {
-  padding: 5px;
-  background-color: rgb(7, 2, 0);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow */
-  transition: box-shadow 0.25s ease; /* Smooth transition */
+  padding: 10px;
+  background-color: #0a0a0a; /* Dark futuristic background */
+  box-shadow: 0px 4px 30px rgba(0, 255, 255, 0.3); /* Sci-fi glow */
+  border: 2px solid rgba(0, 255, 255, 0.5); /* Subtle glowing border */
+  border-radius: 10px;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 /* Sudoku cell styling */
 .sudoku-cell {
-  border: 1px solid transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   width: 60px;
   height: 60px;
   font-size: 2.4em;
   font-weight: 600;
   outline: none;
-  font-family: inherit;
-  background-color: #c8fbb4;
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  background-color: #28384b; /* Dark base color */
+  color: #00ffff; /* Neon text */
   cursor: default;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease; /* Smooth transitions */
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
   padding: 0px;
+  text-align: center;
 }
 
 .sudoku-cell:hover {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add hover shadow */
+  box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.6);
+  transform: scale(1.05); /* Slight hover effect */
 }
 
 /* Highlighted cells */
 .sudoku-cell.highlighted.biggest {
-  background-color: #fbbe53;
-  box-shadow: 0px 4px 10px rgba(251, 190, 83, 0.5); /* Matching shadow */
+  background-color: #6fb3e3;
+  box-shadow: 0px 4px 20px rgba(255, 0, 127, 0.6); /* Vibrant shadow */
 }
 
 .sudoku-cell.highlighted.big {
-  background-color: #f1f959;
-  box-shadow: 0px 4px 10px rgba(241, 249, 89, 0.5); /* Matching shadow */
+  background-color: #00e6e6;
+  box-shadow: 0px 4px 20px rgba(0, 230, 230, 0.6);
 }
 
 .sudoku-cell.highlighted.small {
-  background-color: #f4f991;
-  box-shadow: 0px 4px 10px rgba(244, 249, 145, 0.5); /* Matching shadow */
+  background-color: #5dfb95;
+  box-shadow: 0px 4px 20px rgba(41, 255, 117, 0.6);
 }
 
 /* Prefilled cells */
 .sudoku-cell.prefilled {
-  color: rgb(13, 3, 69);
-  font-weight: 600;
-  transition: box-shadow 0.25s ease; /* Smooth transition */
+  color: #ff007f; /* Neon pink */
+  font-weight: bold;
 }
 
 .sudoku-cell.prefilled:hover {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle hover shadow */
+  box-shadow: 0px 4px 10px rgba(255, 0, 127, 0.6);
 }
 
 /* Non-prefilled cells */
 .sudoku-cell.non-prefilled {
-  color: rgb(5, 19, 220);
+  color: rgb(253, 80, 0);
   font-weight: 600;
   transition: box-shadow 0.25s ease; /* Smooth transition */
 }
 
 .sudoku-cell.non-prefilled:hover {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle hover shadow */
+  box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.6);
 }
 
 /* Grid gap styling */
@@ -206,11 +210,8 @@ button:hover {
   min-width: 33%;
   min-height: 18px;
   font-size: 0.37em;
-  font-weight: 500;
-  color: black;
+  font-weight: 700;
+  color: rgb(132, 97, 220);
   transition: box-shadow 0.25s ease; /* Smooth transition */
 }
 
-/* .notes-cell:hover {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);  
-} */

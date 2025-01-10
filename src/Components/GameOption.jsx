@@ -51,13 +51,12 @@ function GameOption() {
         </p>
       </div>
 
-      <div className="option-bubble">
+      <div className="option-bubble" onClick={notesClickHandler}>
         <button className={`button-option Notes ${notesMode ? 'selected' : ''}`}>
           <img
             src={notesIcon}
             alt="Notes"
             className="button-icon"
-            onClick={notesClickHandler}
           />
         </button>
         <p className="option-name" unselectable="on">
